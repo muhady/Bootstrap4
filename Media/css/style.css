@@ -1,0 +1,312 @@
+@page {
+  size: A4;
+}
+
+/* @page :left {
+  margin-left: 3cm;
+}
+
+@page :right {
+  margin-left: 3cm;
+}
+
+@page :first {
+}
+
+@page :blank {
+  @top-center {
+    content: "This page is intentionally left blank";
+  }
+}
+
+@page:right {
+  @bottom-right {
+    content: counter(page);
+  }
+}
+
+@page:left {
+  @bottom-left {
+    content: counter(page);
+  }
+}
+
+@page:left {
+  @bottom-left {
+    content: "Page " counter(page) " of " counter(pages);
+  }
+} */
+
+@font-face {
+  font-family: "Champ";
+  src: url("../fonts/Champagne & Limousines.ttf");
+}
+
+@font-face {
+  font-family: "Champ";
+  src: url("../fonts/Champagne & Limousines Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Champ";
+  src: url("../fonts/Champagne & Limousines Italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Champ";
+  src: url("../fonts/Champagne & Limousines Bold Italic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media print {
+  .pagebreak {
+    page-break-before: always;
+  }
+}
+
+@page {
+  border-width: 1px;
+  border-style: solid;
+  margin: 0px;
+  padding: 0px;
+  border-color: black;
+}
+
+/* div {
+  border-width: 1px;
+  border-style: solid;
+  margin: 0cm;
+  border-color: black;
+  padding: 0px;
+  font-family: "Champ";
+  font-weight: bold;
+} */
+
+div.sec1 {
+  width: 100%;
+  height: 3cm;
+  border-width: 1px;
+  border-style: dotted;
+  margin: 0cm;
+  border-color: black;
+  padding: 0px;
+  font-family: "Champ";
+  font-weight: bold;
+}
+
+div.sec2 {
+  width: 100%;
+  height: 5cm;
+  border-width: 1px;
+  border-style: dotted;
+  margin: 0cm;
+  border-color: black;
+  padding: 0px;
+  font-family: "Champ";
+  font-weight: bold;
+}
+
+div.sec3-row {
+  width: 100%;
+  height: 9cm;
+  border-width: 0px;
+  border-style: dotted;
+  margin: 0cm;
+  border-color: black;
+  padding: 0px;
+  font-family: "Champ";
+  font-weight: bold;
+}
+
+div.sec3-column {
+  width: 33.33%;
+  float: left;
+  height: 100%;
+  border-inline-end-width: 1px;
+  border-style: dotted;
+  margin: 0px;
+  border-color: black;
+  padding: 0px;
+  font-family: "Champ";
+  font-weight: bold;
+}
+
+div.sec4 {
+  width: 100%;
+  height: 6cm;
+  border-width: 1px;
+  border-style: dotted;
+  margin: 0cm;
+  border-color: black;
+  padding: 0px;
+  font-family: "Champ";
+  font-weight: bold;
+}
+
+.grid-row {
+  display: flex;
+}
+
+.grid-column {
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col,
+.col-auto,
+[class^="col-span-"],
+[class*=" col-span-"] {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.col-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+
+@media (min-width: 480px) {
+  .col-span-1 {
+    flex: 0 0 4.16667%;
+    max-width: 4.16667%;
+  }
+  .col-span-2,
+  .col-span-1u {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+  }
+  .col-span-3 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+  .col-span-4,
+  .col-span-1s,
+  .col-span-2u {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .col-span-5 {
+    flex: 0 0 20.83333%;
+    max-width: 20.83333%;
+  }
+  .col-span-6,
+  .col-span-1q,
+  .col-span-3u {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-span-7 {
+    flex: 0 0 29.16667%;
+    max-width: 29.16667%;
+  }
+  .col-span-8,
+  .col-span-1t,
+  .col-span-2s,
+  .col-span-4u {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .col-span-9 {
+    flex: 0 0 37.5%;
+    max-width: 37.5%;
+  }
+  .col-span-10,
+  .col-span-5u {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+  .col-span-11 {
+    flex: 0 0 45.83333%;
+    max-width: 45.83333%;
+  }
+  .col-span-12,
+  .col-span-h,
+  .col-span-6u {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-span-13 {
+    flex: 0 0 54.16667%;
+    max-width: 54.16667%;
+  }
+  .col-span-14,
+  .col-span-7u {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+  .col-span-15 {
+    flex: 0 0 62.5%;
+    max-width: 62.5%;
+  }
+  .col-span-16,
+  .col-span-2t,
+  .col-span-4s,
+  .col-span-8u {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+  .col-span-17 {
+    flex: 0 0 70.83333%;
+    max-width: 70.83333%;
+  }
+  .col-span-18,
+  .col-span-3q,
+  .col-span-9u {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-span-19 {
+    flex: 0 0 79.16667%;
+    max-width: 79.16667%;
+  }
+  .col-span-20,
+  .col-span-5s,
+  .col-span-10u {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+  .col-span-21 {
+    flex: 0 0 87.5%;
+    max-width: 87.5%;
+  }
+  .col-span-22,
+  .col-span-11u {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+  }
+  .col-span-23 {
+    flex: 0 0 95.83333%;
+    max-width: 95.83333%;
+  }
+  .col-span-24,
+  .col-span-f,
+  .col-span-12u {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
